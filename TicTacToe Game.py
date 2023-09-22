@@ -18,9 +18,6 @@ def insertLetter(letter, position):
     if spaceIsFree(position):
         board[position] = letter
         printBoard(board)
-        if (checkDraw()):
-            print("Draw!")
-            exit()
         if checkForWin():
             if letter == 'X':
                 print("Bot wins!")
@@ -28,6 +25,9 @@ def insertLetter(letter, position):
             else:
                 print("Player wins!")
                 exit()
+         if (checkDraw()):
+            print("Draw!")
+            exit()
 
         return
 
